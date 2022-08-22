@@ -2,8 +2,10 @@ const express = require('express');
 const path = require('path');
 const indexRouter = require('./router/indexRouter')
 const productosController = require('./router/productosRouter')
-
 const app = express();
+
+app.set('view engine', 'ejs');
+
 
 // Ruta de componentes estaticos
 app.use(express.static(path.join(__dirname, '/public')));
